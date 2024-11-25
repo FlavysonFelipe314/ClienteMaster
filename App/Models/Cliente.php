@@ -2,22 +2,26 @@
 
 namespace App\Models;
 
-class User
+class Cliente
 {
     private $id;
+    private $id_user;
     private $name;
     private $email;
-    private $password;
     private $avatar;
     private $birthdate;
-    private $cpf;
-    private $token;
+    private $ranking;
     private $created_at;
     private $updated_at;
 
     public function setId($id)
     {
         $this->id = $id;
+    }
+
+    public function setIdUser($id_user)
+    {
+        $this->id_user = $id_user;
     }
 
     public function setName($name)
@@ -30,11 +34,6 @@ class User
         $this->email = $email;
     }
 
-    public function setPassword($password)
-    {
-        $this->password = $password;
-    }
-
     public function setAvatar($avatar)
     {
         $this->avatar = $avatar;
@@ -45,14 +44,9 @@ class User
         $this->birthdate = $birthdate;
     }
 
-    public function setCpf($cpf)
+    public function setRanking($ranking)
     {
-        $this->cpf = $cpf;
-    }
-
-    public function setToken($token)
-    {
-        $this->token = $token;
+        $this->ranking = $ranking;
     }
 
     public function setCreatedAt($created_at)
@@ -70,6 +64,11 @@ class User
         return $this->id;
     }
 
+    public function getIdUser()
+    {
+        return $this->id_user;
+    }
+
     public function getName()
     {
         return $this->name;
@@ -78,11 +77,6 @@ class User
     public function getEmail()
     {
         return $this->email;
-    }
-
-    public function getPassword()
-    {
-        return $this->password;
     }
 
     public function getAvatar()
@@ -95,14 +89,9 @@ class User
         return $this->birthdate;
     }
 
-    public function getCpf()
+    public function getRanking()
     {
-        return $this->cpf;
-    }
-
-    public function getToken()
-    {
-        return $this->token;
+        return $this->ranking;
     }
 
     public function getCreatedAt()
