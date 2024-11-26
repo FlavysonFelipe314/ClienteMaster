@@ -1,0 +1,169 @@
+aside#menu-bar {
+  width: 300px;
+  height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
+  position: fixed;
+  background-color: var(--primary-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+
+aside#menu-bar::-webkit-scrollbar {
+  width: 8px;
+}
+
+aside#menu-bar::-webkit-scrollbar-track {
+  background: var(--primary-darkGray);
+}
+
+aside#menu-bar::-webkit-scrollbar-thumb {
+  background-color: var(--primary-orange);
+  border-radius: 20px;
+  border: none;
+}
+aside#menu-mobile {
+  display: none;
+}
+
+aside#menu-bar .search {
+  display: none !important;
+}
+
+.top {
+  padding: 20px;
+}
+
+.logo {
+  width: 100%;
+  text-align: center;
+}
+
+.logo .close {
+  display: none;
+}
+
+.logo img {
+  width: 180px;
+  transition: 0.3s;
+}
+
+nav {
+  transition: 0.3s;
+}
+nav ul {
+  transition: 0.3s;
+}
+
+nav ul li {
+  width: 100%;
+  transition: 0.3s;
+  height: 40px;
+  margin: 12px 0 0 0;
+}
+
+nav ul li a {
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid var(--primary-darkGray);
+  padding: 0 10px;
+  height: 100%;
+  transition: 0.3s;
+  border-radius: 5px;
+  color: var(--primary-darkGray);
+  display: flex;
+  font-weight: 400;
+  align-items: center;
+}
+
+nav ul li a:hover,
+nav ul li a.selected {
+  background-color: var(--primary-orange);
+  border: none;
+  color: var(--primary-white);
+}
+
+nav ul li a span {
+  margin: 0 10px 0 0;
+}
+
+.bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-orange);
+  color: var(--primary-white);
+  height: 45px;
+  border-radius: 10px 10px 0 0;
+}
+
+.bottom .options {
+  padding: 5px 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.bottom .option {
+  text-align: center;
+  margin: 0 15px 0 0;
+}
+
+.bottom .option:hover {
+  color: var(--primary-black);
+}
+
+.logout {
+  margin: 0 10px 0 0;
+}
+
+.toogleMenu {
+  width: 0 !important;
+  overflow: hidden !important;
+  transition: 0.3s !important;
+}
+
+.resizeBody {
+  transition: 0.3s;
+  margin: 0 !important;
+}
+
+.resizeLogo {
+  width: 0 !important;
+  transition: 0.3s !important ;
+}
+
+@media screen and (max-width: 1000px) {
+  .logo {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo .close {
+    display: block;
+    color: var(--primary-white);
+    cursor: pointer;
+    font-size: 30px;
+  }
+  aside#menu-bar {
+    width: 0;
+  }
+
+  aside#menu-bar .search {
+    display: flex !important;
+  }
+
+  aside#menu-bar .search {
+    width: 100% !important;
+    margin: 30px 0;
+  }
+
+  .toogleMenu {
+    width: 100% !important;
+  }
+}

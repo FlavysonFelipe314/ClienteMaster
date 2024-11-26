@@ -1,0 +1,63 @@
+section.info-cards .cards-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+section.info-cards .card-wraper {
+  width: 100%;
+  padding: 0 20px;
+}
+
+section.info-cards .card-single {
+  width: 100%;
+  padding: 15px;
+  height: 100px;
+  border-radius: var(--input-borderRadius);
+  background-color: var(--primary-orange);
+  color: var(--primary-white);
+}
+
+section.info-cards .card-wraper:nth-child(1) .card-single {
+  background-color: var(--primary-green);
+}
+
+section.info-cards .card-wraper:nth-child(2) .card-single {
+  background-color: var(--primary-red);
+}
+
+section.info-cards .card-wraper:nth-child(3) .card-single {
+  background-color: var(--primary-blue);
+}
+
+section.info-cards .card-single h1 {
+  margin: 5px 0 0 0;
+  font-weight: 500;
+  font-size: 35px;
+}
+
+section.info-cards .top-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.info-cards .top-card p {
+  font-size: 18px;
+}
+
+section.info-cards .top-card span {
+  font-size: 25px !important;
+}
+
+@media screen and (max-width: 1000px) {
+  section.info-cards .cards-content {
+    flex-direction: column;
+  }
+
+  section.info-cards .card-wraper {
+    padding: 0;
+    margin: 0 0 15px 0;
+  }
+}

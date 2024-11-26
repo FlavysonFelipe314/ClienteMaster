@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="src/styles/vendor/reset.css" />
+    <link rel="stylesheet" href="src/styles/global.css" />
+
+    <link rel="stylesheet" href="src/styles/components/buttons.css" />
+    <link rel="stylesheet" href="src/styles/components/inputs.css" />
+    <link rel="stylesheet" href="src/styles/components/form.css" />
+    <link rel="stylesheet" href="src/styles/components/cards.css" />
+    <link rel="stylesheet" href="src/styles/components/search.css" />
+
+    <link rel="stylesheet" href="src/styles/layouts/sideMenu.css" />
+    <link rel="stylesheet" href="src/styles/layouts/home.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" hr ef="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/cacd8cf69e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <aside id="menu-bar">
+      <div class="top">
+        <div class="logo">
+          <img src="src/assets/images/logo.png" alt="" />
+          <span class="material-symbols-outlined close"> close </span>
+        </div>
+
+        <form action="" id="search" class="search" method="POST">
+          <input type="text" name="query" placeholder="Pesquisar..." />
+          <button type="submit">
+            <span class="material-symbols-outlined"> search </span>
+          </button>
+        </form>
+
+        <nav>
+          <ul>
+            <li>
+              <a href="" class="menu-options selected">
+                <span class="material-symbols-outlined"> home </span>
+                Inicio
+              </a>
+            </li>
+            <li class="menu-options">
+              <a href="clientes.html">
+                <span class="material-symbols-outlined"> groups </span>
+                Clientes
+              </a>
+            </li>
+            <li class="menu-options">
+              <a href="aniversariantes.html">
+                <span class="material-symbols-outlined">
+                  featured_seasonal_and_gifts
+                </span>
+                Aniversáriantes
+              </a>
+            </li>
+            <li class="menu-options">
+              <a href="cupons.html">
+                <span class="material-symbols-outlined">
+                  confirmation_number
+                </span>
+                Cupons
+              </a>
+            </li>
+            <li class="menu-options">
+              <a href="vendas.html">
+                <span class="material-symbols-outlined">
+                  currency_exchange
+                </span>
+                Vendas
+              </a>
+            </li>
+            <li class="menu-options">
+              <a href="relatórios.html">
+                <span class="material-symbols-outlined">
+                  record_voice_over
+                </span>
+                Relatórios
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="bottom">
+        <div class="options">
+          <a href="perfil.html" class="option">
+            <i class="fa-regular fa-user"></i>
+            <p>perfil</p>
+          </a>
+          <a href="" class="option">
+            <i class="fa-solid fa-gear"></i>
+            <p>Contig</p>
+          </a>
+        </div>
+        <a href="" class="logout option">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <p>Sair</p>
+        </a>
+      </div>
+    </aside>
+
+    <aside id="site-body">
+      <div class="container">
+        <header>
+          <img src="src/assets/images/logo.png" alt="" />
+
+          <div class="menu-hamburguer">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+
+          <form action="" id="search" class="search" method="POST">
+            <input type="text" name="query" placeholder="Pesquisar..." />
+            <button type="submit">
+              <span class="material-symbols-outlined"> search </span>
+            </button>
+          </form>
+
+          <a href="perfil.html" class="avatar">
+            <img src="src/assets/images/default_user.png" alt="" />
+          </a>
+        </header>
+
+        <section class="info-cards">
+          <h1 class="title-topic">Bem Vindo, Usuário!</h1>
+
+          <div class="cards-content">
+            <div class="card-wraper">
+              <div class="card-single">
+                <div class="top-card">
+                  <p>Clientes</p>
+                  <span class="material-symbols-outlined"> monitoring </span>
+                </div>
+                <h1>123</h1>
+              </div>
+            </div>
+
+            <div class="card-wraper">
+              <div class="card-single">
+                <div class="top-card">
+                  <p>Clientes</p>
+                  <span class="material-symbols-outlined"> monitoring </span>
+                </div>
+                <h1>123</h1>
+              </div>
+            </div>
+
+            <div class="card-wraper">
+              <div class="card-single">
+                <div class="top-card">
+                  <p>Clientes</p>
+                  <span class="material-symbols-outlined"> monitoring </span>
+                </div>
+                <h1>123</h1>
+              </div>
+            </div>
+
+            <div class="card-wraper">
+              <div class="card-single">
+                <div class="top-card">
+                  <p>Clientes</p>
+                  <span class="material-symbols-outlined"> monitoring </span>
+                </div>
+                <h1>123</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-home">
+          <aside>
+            <div class="info-boxes">
+              <div class="box-wraper">
+                <div class="box-single">
+                  <h3 class="title-box">Ultimos Clientes Cadastrados</h3>
+
+                  <div class="user-info-content">
+                    <a href="cliente.html" class="user-info">
+                      <img src="src/assets/images/default_user.png" alt="" />
+                      <div class="data-user">
+                        <h3>Nome do Cliente</h3>
+                        <p>emaildocliente@gmail.com</p>
+                      </div>
+                    </a>
+
+                    <a href="cliente.html" class="user-info">
+                      <img src="src/assets/images/default_user.png" alt="" />
+                      <div class="data-user">
+                        <h3>Nome do Cliente</h3>
+                        <p>emaildocliente@gmail.com</p>
+                      </div>
+                    </a>
+
+                    <a href="cliente.html" class="user-info">
+                      <img src="src/assets/images/default_user.png" alt="" />
+                      <div class="data-user">
+                        <h3>Nome do Cliente</h3>
+                        <p>emaildocliente@gmail.com</p>
+                      </div>
+                    </a>
+
+                    <a href="cliente.html" class="user-info">
+                      <img src="src/assets/images/default_user.png" alt="" />
+                      <div class="data-user">
+                        <h3>Nome do Cliente</h3>
+                        <p>emaildocliente@gmail.com</p>
+                      </div>
+                    </a>
+
+                    <a href="cliente.html" class="user-info">
+                      <img src="src/assets/images/default_user.png" alt="" />
+                      <div class="data-user">
+                        <h3>Nome do Cliente</h3>
+                        <p>emaildocliente@gmail.com</p>
+                      </div>
+                    </a>
+
+                    <a href="cliente.html" class="user-info">
+                      <img src="src/assets/images/default_user.png" alt="" />
+                      <div class="data-user">
+                        <h3>Nome do Cliente</h3>
+                        <p>emaildocliente@gmail.com</p>
+                      </div>
+                    </a>
+
+                    <a href="cliente.html" class="user-info">
+                      <img src="src/assets/images/default_user.png" alt="" />
+                      <div class="data-user">
+                        <h3>Nome do Cliente</h3>
+                        <p>emaildocliente@gmail.com</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-wraper">
+                <div class="box-single">
+                  <h3 class="title-box">Ultimos Clientes Cadastrados</h3>
+
+                  <div class="user-info-content">
+                    <a href="cliente.html" class="user-info">
+                      <img src="src/assets/images/default_user.png" alt="" />
+                      <div class="data-user">
+                        <h3>Nome do Cliente</h3>
+                        <p>emaildocliente@gmail.com</p>
+                      </div>
+                    </a>
+
+                    <a href="cliente.html" class="user-info">
+                      <img src="src/assets/images/default_user.png" alt="" />
+                      <div class="data-user">
+                        <h3>Nome do Cliente</h3>
+                        <p>emaildocliente@gmail.com</p>
+                      </div>
+                    </a>
+
+                    <a href="cliente.html" class="user-info">
+                      <img src="src/assets/images/default_user.png" alt="" />
+                      <div class="data-user">
+                        <h3>Nome do Cliente</h3>
+                        <p>emaildocliente@gmail.com</p>
+                      </div>
+                    </a>
+
+                    <a href="cliente.html" class="user-info">
+                      <img src="src/assets/images/default_user.png" alt="" />
+                      <div class="data-user">
+                        <h3>Nome do Cliente</h3>
+                        <p>emaildocliente@gmail.com</p>
+                      </div>
+                    </a>
+
+                    <a href="cliente.html" class="user-info">
+                      <img src="src/assets/images/default_user.png" alt="" />
+                      <div class="data-user">
+                        <h3>Nome do Cliente</h3>
+                        <p>emaildocliente@gmail.com</p>
+                      </div>
+                    </a>
+
+                    <a href="cliente.html" class="user-info">
+                      <img src="src/assets/images/default_user.png" alt="" />
+                      <div class="data-user">
+                        <h3>Nome do Cliente</h3>
+                        <p>emaildocliente@gmail.com</p>
+                      </div>
+                    </a>
+
+                    <a href="cliente.html" class="user-info">
+                      <img src="src/assets/images/default_user.png" alt="" />
+                      <div class="data-user">
+                        <h3>Nome do Cliente</h3>
+                        <p>emaildocliente@gmail.com</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chart-box">
+              <div>
+                <canvas class="myChart"></canvas>
+              </div>
+            </div>
+          </aside>
+          <aside>
+            <div class="box-single">
+              <h3 class="title-box">Top 10 Clientes</h3>
+
+              <div class="user-info-content">
+                <a href="cliente.html" class="user-info">
+                  <img src="src/assets/images/default_user.png" alt="" />
+                  <div class="data-user">
+                    <h3>Nome do Cliente</h3>
+                    <p>emaildocliente@gmail.com</p>
+                  </div>
+                </a>
+
+                <a href="cliente.html" class="user-info">
+                  <img src="src/assets/images/default_user.png" alt="" />
+                  <div class="data-user">
+                    <h3>Nome do Cliente</h3>
+                    <p>emaildocliente@gmail.com</p>
+                  </div>
+                </a>
+
+                <a href="cliente.html" class="user-info">
+                  <img src="src/assets/images/default_user.png" alt="" />
+                  <div class="data-user">
+                    <h3>Nome do Cliente</h3>
+                    <p>emaildocliente@gmail.com</p>
+                  </div>
+                </a>
+
+                <a href="cliente.html" class="user-info">
+                  <img src="src/assets/images/default_user.png" alt="" />
+                  <div class="data-user">
+                    <h3>Nome do Cliente</h3>
+                    <p>emaildocliente@gmail.com</p>
+                  </div>
+                </a>
+
+                <a href="cliente.html" class="user-info">
+                  <img src="src/assets/images/default_user.png" alt="" />
+                  <div class="data-user">
+                    <h3>Nome do Cliente</h3>
+                    <p>emaildocliente@gmail.com</p>
+                  </div>
+                </a>
+
+                <a href="cliente.html" class="user-info">
+                  <img src="src/assets/images/default_user.png" alt="" />
+                  <div class="data-user">
+                    <h3>Nome do Cliente</h3>
+                    <p>emaildocliente@gmail.com</p>
+                  </div>
+                </a>
+
+                <a href="cliente.html" class="user-info">
+                  <img src="src/assets/images/default_user.png" alt="" />
+                  <div class="data-user">
+                    <h3>Nome do Cliente</h3>
+                    <p>emaildocliente@gmail.com</p>
+                  </div>
+                </a>
+
+                <a href="cliente.html" class="user-info">
+                  <img src="src/assets/images/default_user.png" alt="" />
+                  <div class="data-user">
+                    <h3>Nome do Cliente</h3>
+                    <p>emaildocliente@gmail.com</p>
+                  </div>
+                </a>
+
+                <a href="cliente.html" class="user-info">
+                  <img src="src/assets/images/default_user.png" alt="" />
+                  <div class="data-user">
+                    <h3>Nome do Cliente</h3>
+                    <p>emaildocliente@gmail.com</p>
+                  </div>
+                </a>
+              </div>
+              <a href="sendCupom.html" class="send-cupom">
+                <button>Enviar Cupom de Desconto</button>
+              </a>
+            </div>
+          </aside>
+        </section>
+      </div>
+    </aside>
+
+    <script src="src/scripts/shared/slideMenu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      var ctx = document.getElementsByClassName("myChart");
+
+      const myChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: [
+            "jan",
+            "fev",
+            "mar",
+            "abr",
+            "mai",
+            "jun",
+            "jul",
+            "ago",
+            "set",
+            "out",
+            "nov",
+            "dez",
+          ],
+          datasets: [
+            {
+              label: "Balança Financeira",
+              data: [
+                1500, 500, 1750, 1200, 992, 150, 1000, 1750, 1600, 952, 110,
+                150,
+              ],
+              borderWidth: 2,
+              borderColor: "transparent",
+              backgroundColor: "#e88b16",
+            },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>

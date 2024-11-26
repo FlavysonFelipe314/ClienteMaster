@@ -1,0 +1,33 @@
+button {
+  width: 100%;
+  color: var(--primary-white);
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  height: var(--input-height);
+  letter-spacing: 2px;
+  background-color: var(--primary-orange);
+  border-radius: var(--input-borderRadius);
+}
+
+button:hover {
+  background-color: var(--primary-orange-hover);
+}
+
+.submit-button button {
+  margin: 10px auto;
+  background-color: var(--primary-black);
+  width: 70%;
+}
+
+.submit-button button:hover {
+  background-color: var(--primary-darkGray);
+  width: 70%;
+}
+
+@media screen and (max-width: 1000px) {
+  button {
+    font-size: 14px;
+  }
+}

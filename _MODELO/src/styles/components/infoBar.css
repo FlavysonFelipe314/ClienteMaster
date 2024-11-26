@@ -1,0 +1,127 @@
+.topic-list {
+  width: 100%;
+  margin: 20px 0 0 0;
+}
+
+.topic-item {
+  display: flex;
+  background-color: var(--primary-white);
+  justify-content: space-between;
+  border-radius: var(--input-borderRadius);
+  padding: 10px;
+  height: 70px;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.client-info h3 {
+  font-size: 18px;
+  color: var(--primary-denseGray);
+  font-weight: 500;
+}
+
+.client-info p {
+  font-size: 15px;
+  margin: 5px 0;
+  color: var(--primary-lightGray);
+  font-weight: 500;
+}
+
+.topic-item .profile-infos {
+  display: flex;
+  width: 33.3%;
+  overflow-x: auto;
+  align-items: center;
+}
+
+.topic-item .profile-infos img {
+  width: 60px;
+  margin: 0 10px 0 0;
+  border-radius: var(--input-borderRadius);
+}
+
+.topic-item .aditional-data {
+  display: flex;
+}
+
+.topic-item .aditional-data .content-data {
+  margin: 0 10px;
+  text-align: center;
+}
+
+.topic-item .aditional-data .content-data p {
+  font-size: 12px;
+  margin: 0 0 5px 0;
+  color: var(--primary-orange);
+}
+
+.topic-item .aditional-data .content-data p,
+.topic-item .aditional-data .content-data span {
+  font-size: 12px;
+  margin: 0 0 5px 0;
+  color: var(--primary-orange);
+}
+
+.topic-item .aditional-data .content-data span {
+  margin: 0;
+  font-weight: 400;
+}
+
+.topic-item .aditional-data .content-data h2 {
+  font-size: 30px;
+  color: var(--primary-darkGray);
+}
+
+.topic-item .client-actions {
+  display: flex;
+  width: 33.3%;
+  overflow-x: auto;
+  justify-content: end;
+}
+
+.topic-item .client-actions button {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin: 0 0 0 10px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 10px;
+}
+
+.topic-item .profile-infos::-webkit-scrollbar,
+.topic-item .client-actions::-webkit-scrollbar {
+  width: 8px;
+  height: 3px;
+}
+.topic-item .profile-infos::-webkit-scrollbar-thumb,
+.topic-item .client-actions::-webkit-scrollbar-thumb {
+  background-color: var(--primary-lightGray);
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .topic-item {
+    flex-direction: column;
+    height: 280px;
+  }
+  .topic-item .client-actions,
+  .topic-item .profile-infos {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .topic-item .client-actions {
+    justify-content: center;
+  }
+
+  .topic-item .profile-infos {
+    flex-direction: column;
+    text-align: center;
+  }
+  .topic-item .profile-infos img {
+    margin: 0 0 10px 0;
+  }
+}

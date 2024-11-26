@@ -1,0 +1,56 @@
+.profile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile .user {
+  display: flex;
+  align-items: center;
+}
+
+.profile .user img {
+  width: 150px;
+  margin: 0 10px 0 0;
+}
+
+.profile .user h1 {
+  font-size: 30px;
+}
+
+.profile .user h2 {
+  margin: 5px 0;
+  color: var(--primary-orange);
+  font-size: 20px;
+}
+
+.profile .option {
+  width: 250px;
+}
+
+@media screen and (max-width: 1000px) {
+  .profile,
+  .profile .user {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile .user img {
+    width: 100px;
+    margin: 0 0 10px 0;
+  }
+
+  .profile .user h1 {
+    font-size: 20px;
+  }
+
+  .profile .user h2 {
+    font-size: 16px;
+  }
+
+  .profile button {
+    height: 35px;
+    margin: 10px 0 0 0;
+  }
+}
