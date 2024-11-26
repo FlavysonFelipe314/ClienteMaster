@@ -29,7 +29,7 @@ $data = $ClienteRepository->findById($id, $userInfo->getId());
             unset($_SESSION["flash"]);
         }
     ?>
-    <form action="<?= BASE_DIR?>/Actions/ClientesAction" method="POST" enctype="multipart/form-data">
+    <form action="<?= BASE_DIR?>/Actions/clientesAction" method="POST" enctype="multipart/form-data">
         <input type="text" name="name" placeholder="Nome..." value="<?= $data->getName()?>"><br>
         <input type="email" name="email" placeholder="email..." value="<?= $data->getEmail()?>"><br>
         <input type="text" name="birthdate" placeholder="nascimento..." value="<?= date("d/m/Y", strtotime($data->getBirthdate()))?>"><br>

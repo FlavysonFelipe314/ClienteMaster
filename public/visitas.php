@@ -1,6 +1,6 @@
 <?php
 
-use App\Repositories\ClienteRepositoryMysql;
+use App\Repositories\VisitaRepositoryMysql;
 use App\Services\AuthService;
 
 require_once "../Config/config.php";
@@ -8,9 +8,8 @@ require_once "../Config/config.php";
 $AuthService = new AuthService($pdo, BASE);
 $userInfo = $AuthService->checkToken();
 
-$ClienteRepository = new ClienteRepositoryMysql($pdo);
-$data = $ClienteRepository->findAll($userInfo->getId());
-
+$VisitaRepository = new VisitaRepositoryMysql($pdo);
+$data = $VisitaRepository->findAll($userInfo->getId());
 
 include_once "../partials/header.php";
 ?>
@@ -21,23 +20,23 @@ include_once "../partials/header.php";
             unset($_SESSION["flash"]);
         }
     ?>
-<h1>Clientes</h1>
+<h1>Visitas</h1>
 
 
 <br>
-<a href="<?= BASE?>/cadastrar_cliente">Cadastrar Cliente</a>
+<a href="<?= BASE?>/cadastrar_visita">Cadastrar Visita</a>
 
-<h3>Lista de clientes</h3>
+<h3>Lista de Visitas</h3>
 
 <?php if(!empty($data)){foreach($data as $item):?>
     <hr>
-    <img src="<?= BASE_DIR?>/uploads/avatar/<?= $item->getAvatar()?>" width="100" alt="">
-    <p><?= $item->getName()?></p>
-    <p><?= $item->getEmail()?></p>
-    <a href="<?= BASE?>/editar_cliente?id=<?= $item->getId()?>">
+    <p><?= $item->getCliente()?></p>
+    <p><?= $item->getDataVisita()?></p>
+    <p><?= $item->getDescription()?></p>
+    <a href="<?= BASE?>/editar_visita?id=<?= $item->getId()?>">
         <button>Editar</button>
     </a>
-    <form action="<?= BASE_DIR?>/Actions/clientesAction" method="GET">
+    <form action="<?= BASE_DIR?>/Actions/visitasAction" method="GET">
         <button type="submit" name="id" value="<?= $item->getId()?>">deletar</button>
     </form>
 <?php endforeach;}?>

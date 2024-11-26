@@ -22,7 +22,7 @@ $userInfo = $AuthService->checkToken();
             unset($_SESSION["flash"]);
         }
     ?>
-    <form action="<?= BASE_DIR?>/Actions/ClientesAction" method="POST" enctype="multipart/form-data">
+    <form action="<?= BASE_DIR?>/Actions/clientesAction" method="POST" enctype="multipart/form-data">
         <input type="text" name="name" placeholder="Nome..."><br>
         <input type="email" name="email" placeholder="email..."><br>
         <input type="text" name="birthdate" placeholder="nascimento..."><br>
