@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="src/styles/components/search.css" />
     <link rel="stylesheet" href="src/styles/components/infoBar.css" />
     <link rel="stylesheet" href="src/styles/components/pagination.css" />
+    <link rel="stylesheet" href="src/styles/components/modal.css" />
 
     <link rel="stylesheet" href="src/styles/layouts/sideMenu.css" />
     <link rel="stylesheet" href="src/styles/layouts/topics.css" />
@@ -129,7 +130,7 @@
         <section class="topic-body">
           <div class="full-title">
             <h1 class="title-topic">Lista de Cupons</h1>
-            <button>Cadastrar Cupom</button>
+            <button onclick="showForm()">Cadastrar Cupom</button>
           </div>
 
           <div class="topic-list">
@@ -281,6 +282,49 @@
       </div>
     </aside>
 
+    <section class="modalForm">
+      <div class="box-form">
+        <div class="closeModal">
+          <span class="material-symbols-outlined" onclick="closeForm()">
+            cancel
+          </span>
+        </div>
+        <h1>Cadastrar Cupom</h1>
+        <h3>Preencha Todos Os Campos</h3>
+        <form action="">
+          <div class="w100-wraper">
+            <input type="text" name="name" placeholder="Nome do Cliente..." />
+          </div>
+
+          <div class="w100-wraper">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email do Cliente..."
+            />
+          </div>
+
+          <div class="w100-wraper">
+            <input type="file" name="avatar" />
+          </div>
+
+          <div class="w100-wraper">
+            <input
+              type="text"
+              name="birthdate"
+              placeholder="Data de Nascimento..."
+            />
+          </div>
+          <br />
+
+          <div class="w100-submit">
+            <button type="submit">Cadastrar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
     <script src="src/scripts/shared/slideMenu.js"></script>
+    <script src="src/scripts/shared/showForm.js"></script>
   </body>
 </html>

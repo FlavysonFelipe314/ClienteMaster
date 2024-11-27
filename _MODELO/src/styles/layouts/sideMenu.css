@@ -95,7 +95,7 @@ nav ul li a span {
   align-items: center;
   background-color: var(--primary-orange);
   color: var(--primary-white);
-  height: 45px;
+  height: 60px;
   border-radius: 10px 10px 0 0;
 }
 
@@ -109,6 +109,7 @@ nav ul li a span {
 .bottom .option {
   text-align: center;
   margin: 0 15px 0 0;
+  font-size: 16px;
 }
 
 .bottom .option:hover {
