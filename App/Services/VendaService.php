@@ -26,6 +26,13 @@ class VendaService{
 
         $this->VendaRepository->create($Venda);
     }
+
+    public function getFaturamento($id_user){
+        $total = $this->VendaRepository->findTotal($id_user);
+
+        $total = (!empty($total)) ? $total : 0;
+        return $total;
+    }
 }
 
 ?>

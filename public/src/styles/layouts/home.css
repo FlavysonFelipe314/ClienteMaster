@@ -1,0 +1,130 @@
+section.content-home {
+  display: flex;
+}
+
+section.content-home aside:nth-child(1) {
+  width: 70%;
+  padding: 10px;
+}
+
+section.content-home aside:nth-child(2) {
+  width: 30%;
+  padding: 10px;
+}
+
+section.content-home .info-boxes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+section.content-home .box-wraper {
+  width: 49%;
+}
+
+section.content-home .box-single {
+  width: 100%;
+  background-color: var(--primary-white);
+  padding: 15px;
+  border-radius: var(--input-borderRadius);
+}
+
+section.content-home .box-single h3 {
+  font-weight: 500;
+  color: var(--primary-denseGray);
+}
+
+section.content-home .user-info-content {
+  margin: 10px 0;
+  max-height: 350px;
+  overflow-y: scroll;
+  overflow-x: auto;
+}
+
+section.content-home .user-info-content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+section.content-home .user-info-content::-webkit-scrollbar-thumb {
+  background-color: var(--primary-lightGray);
+  border-radius: 20px;
+}
+
+section.content-home .user-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+section.content-home .user-info:hover {
+  background-color: var(--primary-hover-default);
+}
+
+section.content-home .user-info img {
+  width: 50px;
+  margin: 0 10px 0 0;
+  border-radius: 50px;
+}
+
+section.content-home h3 {
+  color: var(--primary-denseGray);
+  font-weight: 500px;
+}
+
+section.content-home p {
+  font-size: 14px;
+  margin: 5px 0 0 0;
+  color: var(--primary-lightGray);
+  font-weight: 500;
+}
+
+section.content-home aside:nth-child(2) {
+  height: 700px;
+}
+
+section.content-home aside:nth-child(2) .user-info-content {
+  height: auto;
+}
+
+section.content-home .chart-box {
+  width: 100%;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: var(--input-borderRadius);
+  background-color: var(--primary-white);
+}
+
+section.content-home .chart-box canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+@media screen and (max-width: 1000px) {
+  section.content-home {
+    flex-direction: column;
+  }
+
+  section.content-home aside:nth-child(1) {
+    width: 100%;
+    padding: 0;
+  }
+
+  section.content-home aside:nth-child(2) {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section.content-home .info-boxes {
+    flex-direction: column;
+  }
+
+  section.content-home .box-wraper {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+}

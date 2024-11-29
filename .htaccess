@@ -11,4 +11,6 @@ RewriteRule ^([^.?]+)$ $1.php [L]
 RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$"
 RewriteRule .* - [L,R=404]
 
+Options -Indexes
+
 ErrorDocument 404 http://localhost/Sistema_clientMaster/public/error/404

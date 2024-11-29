@@ -13,6 +13,8 @@ class Cliente
     private $ranking;
     private $created_at;
     private $updated_at;
+    public $total;
+    public $visitas;
 
     public function setId($id)
     {

@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\User;
 use App\Repositories\UserRepositoryMysql;
 use PDO;
 
@@ -36,6 +37,13 @@ class UserService{
         return false;
         exit;
     }
+
+    public function updateUser(User $user) {
+        $this->UserRepository->update($user);
+    }
+    
+
+
 }
 
 ?>

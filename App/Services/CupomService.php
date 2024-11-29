@@ -27,6 +27,13 @@ class CupomService{
 
         $this->CupomRepository->create($Cupom);
     }
+
+    public function countTotalCupons($id_user)
+    {
+        $data = $this->CupomRepository->findAll($id_user);
+        $total = (!empty($data)) ? count($data) : 0;
+        return $total;
+    }
 }
 
 ?>

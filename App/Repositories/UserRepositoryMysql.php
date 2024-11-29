@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Interfaces\UserRepositoryInterface;
+use App\Models\System;
 use App\Models\User;
 use PDO;
 
@@ -26,6 +27,13 @@ class UserRepositoryMysql implements UserRepositoryInterface{
         $sql->bindValue(":cpf", $user->getCpf());
         $sql->bindValue(":token", $user->getToken());
         $sql->execute();
+
+        $systemRepository = new SystemRepositoryMysql($this->pdo);
+        $system = new System($this->pdo);
+
+        $system->id_user = $this->pdo->lastInsertId();
+
+        $systemRepository->create($system);
     }
 
     public function update(User $user)

@@ -12,6 +12,8 @@ class Venda
     private $total;
     private $service;
     private $cliente;
+    private $avatar;
+    public $email;
 
 
     // Setters
@@ -55,6 +57,12 @@ class Venda
         $this->cliente = $cliente;
     }
 
+    public function setAvatar($avatar)
+    {
+        $this->avatar = $avatar;
+    }
+
+
     // Getters
     public function getId()
     {
@@ -94,6 +102,11 @@ class Venda
     public function getCliente()
     {
         return $this->cliente;
+    }
+
+    public function getAvatar()
+    {
+        return $this->avatar;
     }
 }
 

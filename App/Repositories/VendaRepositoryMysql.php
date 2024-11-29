@@ -33,8 +33,7 @@ class VendaRepositoryMysql implements VendaRepositoryInterface
 
     public function update(Venda $venda)
     {
-        $sql = $this->pdo->prepare("
-            UPDATE vendas SET 
+        $sql = $this->pdo->prepare("UPDATE vendas SET 
                 id_user = :id_user,
                 id_cliente = :id_cliente,
                 id_cupom = :id_cupom,
@@ -57,7 +56,7 @@ class VendaRepositoryMysql implements VendaRepositoryInterface
     {
         $array = [];
 
-        $sql = $this->pdo->prepare("SELECT vendas.*, clientes.name AS cliente
+        $sql = $this->pdo->prepare("SELECT vendas.*, clientes.name AS cliente, clientes.avatar  AS avatar, clientes.email AS email
         FROM vendas 
         INNER JOIN clientes ON clientes.id = vendas.id_cliente
         WHERE vendas.id_user = :id_user
@@ -74,6 +73,19 @@ class VendaRepositoryMysql implements VendaRepositoryInterface
             }
 
             return $array;
+        }
+
+        return false;
+    }
+
+    public function findTotal($id_user){
+        $sql = $this->pdo->prepare("SELECT SUM(DISTINCT total) AS total FROM vendas WHERE id_user = :id_user");
+        $sql->bindValue(":id_user", $id_user);
+        $sql->execute();
+
+        if ($sql->rowCount() > 0) {
+            $data = $sql->fetch(PDO::FETCH_ASSOC);
+            return $data["total"];
         }
 
         return false;
@@ -112,6 +124,8 @@ class VendaRepositoryMysql implements VendaRepositoryInterface
         $venda->setTotal($data["total"]);
         $venda->setService($data["service"]);
         $venda->setCliente($data["cliente"]);
+        $venda->setAvatar($data["avatar"]);
+        $venda->email = $data["email"];
 
 
         return $venda;

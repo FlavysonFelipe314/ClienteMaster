@@ -1,0 +1,123 @@
+:root {
+  --primary-white: #ffffff;
+  --primary-lightGray: #cccccc;
+  --primary-darkGray: #666;
+  --primary-denseGray: #333;
+  --primary-green: #65ce91;
+  --primary-red: #f05252;
+  --primary-blue: #6b9efc;
+
+  /* HOVER'S */
+
+  --primary-orange-hover: #d0790e;
+  --primary-hover-default: #f0f0f0;
+
+  /* FONT'S SIZE */
+  --input-height: 50px;
+  --input-borderRadius: 10px;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-background);
+  display: flex;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+.full-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.full-title button {
+  width: 250px;
+  height: 40px;
+}
+
+.title-topic {
+  color: var(--primary-darkGray);
+  font-size: 30px;
+  font-weight: 400;
+}
+
+#site-body {
+  width: 100%;
+  padding: 0 0 0 300px;
+  transition: 0.3s !important;
+}
+
+header {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .menu-hamburguer {
+  font-size: 30px;
+  color: var(--primary-darkGray);
+}
+
+header > img {
+  display: none;
+}
+
+header .menu-hamburguer i {
+  cursor: pointer !important;
+}
+
+header .avatar img {
+  width: 70px;
+  border-radius: 80px;
+}
+
+@media screen and (max-width: 1000px) {
+  html,
+  body {
+    height: auto;
+  }
+
+  #site-body {
+    padding: 0;
+  }
+
+  header .avatar img,
+  header .search {
+    display: none;
+  }
+
+  header > img {
+    display: block;
+    width: 150px;
+  }
+
+  header .menu-hamburguer {
+    width: 100%;
+    text-align: end;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .full-title {
+    flex-direction: column;
+  }
+  .title-topic {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+  }
+}
+
+.resizeBody {
+  padding: 0 !important;
+}

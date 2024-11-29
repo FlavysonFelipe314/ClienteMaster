@@ -50,9 +50,8 @@ $dataCupom = $CupomRepository->findAll($userInfo->getId());
             <?php endforeach;}?>
         </select><br>
 
-        <input type="number" name="total" placeholder="total da venda..."><br>
+        <br>
 
-        <textarea name="service" placeholder="Descrição da venda..." id=""></textarea><br>
         <button type="submit" name="action" value="create">Cadastrar</button>
     </form>
 </body>

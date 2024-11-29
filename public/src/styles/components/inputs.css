@@ -1,0 +1,55 @@
+input,
+select,
+textarea {
+  width: 100%;
+  height: var(--input-height);
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  background-color: var(--primary-white);
+  font-weight: 600;
+  border: 2px solid var(--primary-black);
+  border-radius: var(--input-borderRadius);
+}
+
+.input-wraper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+
+form input:focus {
+  color: var(--primary-orange);
+  border: 2px solid var(--primary-orange);
+}
+
+/* ICONE */
+
+.form-icon {
+  width: 80px;
+  margin: 0 8px 0 0;
+  background-color: var(--primary-black);
+  height: var(--input-height);
+  display: flex;
+  justify-content: center;
+  border-radius: var(--input-borderRadius);
+  align-items: center;
+  color: var(--primary-white);
+}
+
+form input:focus + .form-icon {
+  background-color: var(--primary-orange);
+}
+
+header form .limited {
+  width: 75px;
+  margin: 0 10px 0 0;
+}
+
+header form input {
+  border: none;
+}

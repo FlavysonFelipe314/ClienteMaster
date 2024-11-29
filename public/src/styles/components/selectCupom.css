@@ -1,0 +1,48 @@
+.modalCupom {
+  position: fixed;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  background-color: #000000b0;
+  display: flex;
+}
+
+.modalCupom form {
+  width: 50%;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.modalCupom .closeModal {
+  width: 100%;
+  text-align: end;
+}
+
+.modalCupom .closeModal span {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.modalCupom h1 {
+  text-align: center;
+  font-size: 30px;
+  margin: 0 0 20px 0;
+}
+
+.modalCupom form button {
+  margin: 20px 0 0 0 !important;
+  width: 100% !important;
+  font-size: 18px !important;
+  height: 45px !important;
+}
+
+.apareceCupom {
+  transition: 0.3s !important;
+  height: 100vh !important;
+}

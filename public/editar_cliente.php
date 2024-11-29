@@ -34,6 +34,7 @@ $data = $ClienteRepository->findById($id, $userInfo->getId());
         <input type="email" name="email" placeholder="email..." value="<?= $data->getEmail()?>"><br>
         <input type="text" name="birthdate" placeholder="nascimento..." value="<?= date("d/m/Y", strtotime($data->getBirthdate()))?>"><br>
         <input type="file" name="avatar" placeholder="Avatar..." accept="image/png, image/jpg, image/jpeg"><br>
+        <input type="hidden" name="id" value="<?= $data->getId()?>"><br>
         <button type="submit" name="action" value="update">Entrar</button>
     </form>
 </body>

@@ -1,0 +1,29 @@
+.w100-wraper {
+  width: 100%;
+  display: flex;
+  margin: 10px 0;
+}
+
+.w100-wraper input {
+  border: none;
+}
+
+.w100-button {
+  margin: 20px 0;
+}
+
+.example-blox {
+  width: 100px;
+  height: 50px;
+  margin: 0 10px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: var(--input-borderRadius);
+}
+
+.example-blox img {
+  width: 40px;
+}

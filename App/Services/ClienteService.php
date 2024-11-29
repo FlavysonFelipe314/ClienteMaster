@@ -26,6 +26,7 @@ class ClienteService{
         return false;
         exit;
     }
+    
 
     public function resgisterCliente($name, $email, $avatar, $birthdate, $id_user)
     { 
@@ -37,6 +38,30 @@ class ClienteService{
         $Cliente->setIdUser($id_user);
 
         $this->ClienteRepository->create($Cliente);
+    }
+
+    public function countTotalClientes($id_user)
+    {
+        $data = $this->ClienteRepository->findAll($id_user);
+        $total = (!empty($data)) ? count($data) : 0;
+        return $total;
+    }
+
+    public function countTotalBirthdate($id_user)
+    {
+        $data = $this->ClienteRepository->findBirthdateMonth($id_user);
+        $total = (!empty($data)) ? count($data) : 0;
+        return $total;
+    }
+
+    public function search($query, $id_user){
+        $data = $this->ClienteRepository->search($query, $id_user);
+        return $data;
+    }
+
+    public function getAllClientes($id_user){
+        $data = $this->ClienteRepository->findAll($id_user);
+        return $data;
     }
 
 }

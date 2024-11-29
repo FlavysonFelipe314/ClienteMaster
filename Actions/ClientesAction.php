@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Cliente;
 use App\Repositories\ClienteRepositoryMysql;
 use App\Services\AuthService;
 use App\Services\ClienteService;
@@ -116,12 +115,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"  && $_POST["action"] == "update")
     $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
     $birthdate = filter_input(INPUT_POST, "birthdate");
     $avatar = $_FILES["avatar"];
+    $id = filter_input(INPUT_POST, "id");
+
+
 
     $acceptPerfil = ["image/png", "image/jpeg", "image/jpg"];
 
     if($name && $email && $birthdate)
     {
 
+        $Cliente = $ClienteRepository->findById($id, $userInfo->getId());
         $birthdate = explode("/", $birthdate);
         if(count($birthdate) != 3)
         {
@@ -179,7 +182,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"  && $_POST["action"] == "update")
         
                 $perfilName = md5(time().rand(0, 9999).'.jpg');
 
-                $userInfo->setAvatar($perfilName);
+                $Cliente->setAvatar($perfilName);
                 
                 imagejpeg($finalImage, "../uploads/avatar/".$perfilName, 100); 
             }else{
@@ -189,7 +192,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"  && $_POST["action"] == "update")
             }
         }
 
-        $Cliente = $ClienteRepository->findByEmail($email, $userInfo->getId());
+
         if($Cliente->getEmail() != $email){
             if($ClienteService->emailExists($email, $userInfo->getId()) === false){
                 $Cliente->setEmail($email);

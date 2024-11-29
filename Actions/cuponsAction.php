@@ -43,14 +43,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"  && $_POST["action"] == "update")
     $total = filter_input(INPUT_POST, "total");
     $type = filter_input(INPUT_POST, "type");
 
-    if($id_client && $name && $total && $type){   
+    if($name && $total){   
         
         $Cupom = $CupomRepository->findById($id, $userInfo->getId());
-
-        $Cupom->setIdClient($id_client);
         $Cupom->setName($name);
         $Cupom->setTotalDiscount($total);
-        $Cupom->setTypeDiscount($type);
+
+        if(!empty($type)){
+            $Cupom->setTypeDiscount($type);
+        }
+
+        if(!empty($id_client)){
+            $Cupom->setIdClient($id_client);
+        }
+
 
         $CupomRepository->update($Cupom);
 

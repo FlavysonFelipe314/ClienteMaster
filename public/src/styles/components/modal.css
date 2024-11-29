@@ -1,0 +1,58 @@
+section.modalForm {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  display: flex;
+  left: 0;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000cb;
+  transition: 0.3s !important;
+}
+
+section.modalForm .box-form {
+  width: 50%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+section.modalForm .box-form form input,
+section.modalForm .box-form form select,
+section.modalForm .box-form form textarea {
+  border: 1px solid #000;
+}
+
+section.modalForm .box-form form input:focus {
+  border-color: var(--primary-orange);
+}
+
+section.modalForm .closeModal {
+  width: 100%;
+  text-align: end;
+}
+
+section.modalForm .closeModal span {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+section.modalForm h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+section.modalForm h3 {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+  color: #666;
+  margin: 5px 0 20px 0;
+}
+
+.showForm {
+  height: 100vh !important;
+  transition: 0.3s !important;
+}
