@@ -5,6 +5,12 @@ let birthdate = document.querySelector("input[name=birthdate]");
 let total = document.querySelector("input[name=total]");
 let submit = document.querySelector(".w100-submit");
 
+function decodeHTML(html) {
+  let textarea = document.createElement("textarea");
+  textarea.innerHTML = html;
+  return textarea.value;
+}
+
 function showForm(id, id_user, action) {
   modal.classList.add("showForm");
 
@@ -30,26 +36,26 @@ function showForm(id, id_user, action) {
         console.log(data);
         switch (action) {
           case "Cliente":
-            nome.value = data.nome;
-            email.value = data.email;
-            birthdate.value = data.birthdate;
+            nome.value = decodeHTML(data.nome);
+            email.value = decodeHTML(data.email);
+            birthdate.value = data.birthdate; // Datas geralmente não têm caracteres especiais
             break;
 
           case "User":
-            nome.value = data.nome;
-            email.value = data.email;
+            nome.value = decodeHTML(data.nome);
+            email.value = decodeHTML(data.email);
             birthdate.value = data.birthdate;
             break;
 
           case "Cupom":
-            nome.value = data.nome;
-            total.value = data.total;
+            nome.value = decodeHTML(data.nome);
+            total.value = data.total; // Total geralmente é numérico
             break;
         }
 
         submit.innerHTML = `
-        <input type="hidden" name="id" value="${data.id}" />
-        <button type="submit" name="action" value="update">Editar</button>
+          <input type="hidden" name="id" value="${data.id}" />
+          <button type="submit" name="action" value="update">Editar</button>
         `;
       })
       .catch((error) => {

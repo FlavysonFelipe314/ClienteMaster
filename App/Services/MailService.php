@@ -2,8 +2,10 @@
 
 namespace App\Services;
 
+use App\Models\System;
 use App\Repositories\ClienteRepositoryMysql;
 use App\Repositories\CupomRepositoryMysql;
+use App\Repositories\SystemRepositoryMysql;
 use App\Repositories\UserRepositoryMysql;
 use PDO;
 
@@ -24,11 +26,16 @@ class MailService{
 
     public function sendCupom($to, $from, $cupom)
     {
+        
         $emailTo = $this->ClienteRepository->findById($to, $from);
         $cupomData = $this->CupomRepository->findById($cupom, $from);
-        $subject = SYSTEM_NAME." - CUPOM DE DESCONTO DE ".($cupomData->getTypeDiscount() == "%") ? number_format($cupomData->getTotalDiscount(), 0, ".", " ") : str_replace(".", ",",  $cupomData->getTotalDiscount()).$cupomData->getTypeDiscount();
-        $message = "<h1>".$emailTo->getName()."! Você recebeu um cupom de desconto de: ".$cupomData->getTotalDiscount().$cupomData->getTypeDiscount()." 
-            </h1><br><h3> Para usar como quiser nos serviços de ". SYSTEM_NAME ." <br> 
+        $system = new SystemRepositoryMysql($this->pdo);
+        $name = $system->findById($from);
+
+        $subject = $name->business_name." - CUPOM DE DESCONTO";
+        $total = ($cupomData->getTypeDiscount() == "%") ? number_format($cupomData->getTotalDiscount(), 0, ".", " ") : str_replace(".", ",",  $cupomData->getTotalDiscount());
+        $message = "<h1>".$emailTo->getName()."! Você recebeu um cupom de desconto de: $total".$cupomData->getTypeDiscount()." 
+            </h1><br><h3> Para usar como quiser nos serviços de ". $name->business_name ." <br> 
             Utilize o Cupom: ". $cupomData->getName() . ", Para obter o Desconto!</h3>";
     
         $headers = "MIME-Version: 1.0" . "\r\n";

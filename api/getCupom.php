@@ -23,7 +23,7 @@ $total = $cupom->getTotalDiscount();
 $array = [
     'error' => '',
     'id' => $id,
-    'nome' => $nome,
+    'nome' => htmlspecialchars($nome),
     'total' => $total,
 ];
 
